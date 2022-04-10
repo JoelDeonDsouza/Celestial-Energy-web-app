@@ -13,13 +13,9 @@ function HomePageSections() {
           </p>
         </Ptag>
       </Text>
-      <BTN>
-        <BTNGroup>
-          <LBtn>Learn More</LBtn>
-          <RBtn>Get in Touch</RBtn>
-        </BTNGroup>
-        <Arrow src="..//Images/arrow.png" />
-      </BTN>
+      <BTNGroup>
+        <BTN>Discover the hydrogen plant</BTN>
+      </BTNGroup>
     </Wrap>
   );
 }
@@ -27,7 +23,7 @@ function HomePageSections() {
 export default HomePageSections;
 
 const Wrap = styled.div`
-  background-image: url("..//Images/homeWall.png");
+  background-image: url("..//Images/homePageWall.png");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -46,29 +42,24 @@ const Text = styled.div`
 const Ptag = styled.div`
   padding-top: 5vh;
   font-size: 25px;
+  font-weight: bolder;
 `;
-const BTN = styled.div``;
 const BTNGroup = styled.div`
-  display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 `;
-const LBtn = styled.div`
-  background-color: #0e185f;
-  height: 40px;
-  width: 256px;
-  color: #fff;
+const BTN = styled.div`
+  background-color: #1b1534;
+  font-weight: bolder;
+  height: 50px;
+  width: 300px;
+  color: #b8fff9;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  opacity: 0.89;
+  opacity: 15;
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
   margin: 8px;
-`;
-const RBtn = styled(LBtn)``;
-const Arrow = styled.div`
-  margin-top: 20px;
-  height: 40px;
 `;
