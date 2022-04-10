@@ -56,7 +56,7 @@ const BTN = styled.div`
   border-radius: 25px;
   opacity: 15;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   margin: 8px;
 `;

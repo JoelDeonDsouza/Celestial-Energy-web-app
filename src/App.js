@@ -7,7 +7,7 @@ import HomePage from "./Components/HomePage/homePage";
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <HomePage />
     </div>
   );

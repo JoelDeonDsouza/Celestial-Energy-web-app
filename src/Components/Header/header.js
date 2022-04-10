@@ -1,11 +1,25 @@
 import React from "react";
+import styled from "styled-components";
 
 function Header() {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <Container>
+      <a>
+        <h1>Celestial Energy</h1>
+      </a>
+      <Menu></Menu>
+    </Container>
   );
 }
 
 export default Header;
+
+const Container = styled.div`
+  min-height: 30px;
+  position: fixed;
+  display: flex;
+  align-item: center;
+  padding: 10px 20px;
+`;
+
+const Menu = styled.div``;
