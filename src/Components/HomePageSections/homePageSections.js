@@ -1,20 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-function HomePageSections() {
+function HomePageSections({ title, description, btn, img }) {
   return (
-    <Wrap>
+    <Wrap bgImage={img}>
       <Text>
-        <h1>The future of Energy starts right here</h1>{" "}
+        <h1>{title}</h1>{" "}
         <Ptag>
-          <p>
-            The worls's first integrated, commercial, industrial-scale hydrogen
-            plant for making synthetic climate-neutral fuels.{" "}
-          </p>
+          <p>{description}</p>
         </Ptag>
       </Text>
       <BTNGroup>
-        <BTN>Discover the hydrogen plant</BTN>
+        <BTN>{btn}</BTN>
       </BTNGroup>
     </Wrap>
   );
@@ -23,7 +20,7 @@ function HomePageSections() {
 export default HomePageSections;
 
 const Wrap = styled.div`
-  background-image: url("..//Images/homePageWall.png");
+  background-image: ${(props) => `url("..//Images/${props.bgImage}")`};
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -48,7 +45,7 @@ const BTNGroup = styled.div`
   margin-bottom: 65px;
 `;
 const BTN = styled.div`
-  background-color: #1b1534;
+  background-color: #161853;
   font-weight: bolder;
   height: 50px;
   width: 300px;

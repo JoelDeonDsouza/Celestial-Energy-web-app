@@ -5,7 +5,30 @@ import HomePageSections from "../HomePageSections/homePageSections";
 function HomePage() {
   return (
     <Container>
-      <HomePageSections />
+      <HomePageSections
+        title="The future of Energy starts right here"
+        description="The worls's first integrated, commercial, industrial-scale hydrogen plant for making synthetic climate-neutral fuels."
+        img="homePageWall.png"
+        btn="Discover the hydrogen plant"
+      />
+      <HomePageSections
+        title="Energy Stories"
+        description="5 uncomfortable truths about the energy transformation."
+        img="homePageWall2.png"
+        btn="Go to Magazine"
+      />
+      <HomePageSections
+        title="Events & News"
+        description="Siemens Energy to start production of hydrogen electrolyzers in Berlin."
+        img="homePageWall3.png"
+        btn="Go to Press"
+      />
+      <HomePageSections
+        title="What we do"
+        description="We offer products, solutions, and services across the entire energy value chain. We support our customers on their way to a more sustainable future – no matter how far along the journey they are."
+        img="homePageWall4.png"
+        btn="Learn More"
+      />
     </Container>
   );
 }
