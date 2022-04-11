@@ -5,28 +5,45 @@ import MenuIcon from "@mui/icons-material/Menu";
 function Header() {
   return (
     <Container>
-      <a>
-        <img src="/images/logo.png" />
-      </a>
-      <Menu>
-        <a href="#">Home</a>
+      <ContainerWrapper>
+        <LogoWrapper>
+          <a>
+            <img src="/images/logo.png" />
+          </a>
+        </LogoWrapper>
+        <Menu>
+          <a href="#">Home</a>
 
-        <a href="#">About</a>
+          <a href="#">About</a>
 
-        <a href="#">Blog</a>
-      </Menu>
+          <a href="#">Hydro-plant</a>
 
-      <MenuRight>
-        <CustomMenu />
-      </MenuRight>
+          <a href="#">Blog</a>
+
+          <a href="#">Contact</a>
+        </Menu>
+        <MenuRight>
+          <CustomMenu />
+        </MenuRight>
+      </ContainerWrapper>
     </Container>
   );
 }
 
 export default Header;
 
+const ContainerWrapper = styled.div`
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
+`;
+
+const LogoWrapper = styled.div``;
+
 const Container = styled.div`
-  width: 200px;
   min-height: 30px;
   position: fixed;
   display: flex;
