@@ -9,16 +9,16 @@ function Header() {
         <img src="/images/logo.png" />
       </a>
       <Menu>
-        <a href="">Home</a>
+        <a href="#">Home</a>
 
-        <a href="">About</a>
+        <a href="#">About</a>
 
-        <a href="">Carrer</a>
-
-        <MenuRight>
-          <CustomMenu />
-        </MenuRight>
+        <a href="#">Blog</a>
       </Menu>
+
+      <MenuRight>
+        <CustomMenu />
+      </MenuRight>
     </Container>
   );
 }
@@ -53,7 +53,7 @@ const Menu = styled.div`
     flex-wrap: nowrap;
     font-size: 20px;
   }
-  @media (max-width: 768) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
