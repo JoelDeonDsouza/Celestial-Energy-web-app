@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import LightSpeed from "react-reveal/LightSpeed";
 
 function HomePageSections({ title, description, btn, img }) {
   return (
     <Wrap bgImage={img}>
       <Text>
-        <h1>{title}</h1>{" "}
+        <LightSpeed bottom>
+          <h1>{title}</h1>{" "}
+        </LightSpeed>
         <Ptag>
           <p>{description}</p>
         </Ptag>
