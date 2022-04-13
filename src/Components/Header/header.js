@@ -25,6 +25,23 @@ function Header() {
         <MenuRight>
           <CustomMenu />
         </MenuRight>
+        <BGNAV>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>Blog</a>
+          </li>
+          <li>
+            <a>Hydro-power plant</a>
+          </li>
+          <li>
+            <a>Tech-hub</a>
+          </li>
+          <li>
+            <a>Contact</a>
+          </li>
+        </BGNAV>
       </ContainerWrapper>
     </Container>
   );
@@ -53,6 +70,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   img {
     width: 120px;
   }
@@ -81,3 +99,14 @@ const MenuRight = styled.div`
 `;
 
 const CustomMenu = styled(MenuIcon)``;
+
+const BGNAV = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #eeeeee;
+  width: 225px;
+  list-style: none;
+  padding: 20px;
+`;
