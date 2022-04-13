@@ -25,14 +25,17 @@ function Header() {
           <a href="#">Contact</a>
         </Menu>
         <MenuRight>
-          <CustomMenu />
+          <CustomMenu onClick={() => setTabOpen(true)} />
         </MenuRight>
         <BGNAV show={tabOpen}>
           <CUSTOMCLOSE>
-            <CLOSE />
+            <CLOSE onClick={() => setTabOpen(false)} />
           </CUSTOMCLOSE>
           <li>
             <a>Home</a>
+          </li>
+          <li>
+            <a>About Us</a>
           </li>
           <li>
             <a>Blog</a>
@@ -127,6 +130,7 @@ const BGNAV = styled.div`
   list-style: none;
   padding: 20px;
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.4s;
   li {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
