@@ -6,10 +6,10 @@ function HomePage() {
   return (
     <Container>
       <HomePageSections
-        title="The future of Energy starts right here"
-        description="The worls's first integrated, commercial, industrial-scale hydrogen plant for making synthetic climate-neutral fuels."
+        title="The future of Energy starts now"
+        description="The worlds's first industrial-scale hydrogen plant for making an eco-friends environment"
         img="homePageWall.png"
-        btn="Discover the hydrogen plant"
+        btn="Discover the  Energy plant"
       />
       <HomePageSections
         title="Energy Stories"

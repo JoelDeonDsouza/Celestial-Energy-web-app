@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { selectEnergy } from "../../features/Celestial-Data/celestial";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [tabOpen, setTabOpen] = useState(false);
+  const energy = useSelector(selectEnergy);
   return (
     <Container>
       <ContainerWrapper>
@@ -14,15 +17,12 @@ function Header() {
           </a>
         </LogoWrapper>
         <Menu>
-          <a href="#">Home</a>
-
-          <a href="#">About</a>
-
-          <a href="#">Hydro-plant</a>
-
-          <a href="#">Blog</a>
-
-          <a href="#">Contact</a>
+          {energy &&
+            energy.map((hydro, index) => (
+              <a key={index} href="#">
+                {hydro}
+              </a>
+            ))}
         </Menu>
         <MenuRight>
           <CustomMenu onClick={() => setTabOpen(true)} />
