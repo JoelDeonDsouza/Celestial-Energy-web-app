@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Header() {
+  const [tabOpen, setTabOpen] = useState(false);
   return (
     <Container>
       <ContainerWrapper>
@@ -25,7 +27,10 @@ function Header() {
         <MenuRight>
           <CustomMenu />
         </MenuRight>
-        <BGNAV>
+        <BGNAV show={tabOpen}>
+          <CUSTOMCLOSE>
+            <CLOSE />
+          </CUSTOMCLOSE>
           <li>
             <a>Home</a>
           </li>
@@ -37,6 +42,9 @@ function Header() {
           </li>
           <li>
             <a>Tech-hub</a>
+          </li>
+          <li>
+            <a>Carrer</a>
           </li>
           <li>
             <a>Contact</a>
@@ -100,6 +108,15 @@ const MenuRight = styled.div`
 
 const CustomMenu = styled(MenuIcon)``;
 
+const CUSTOMCLOSE = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const CLOSE = styled(CloseIcon)`
+  cursor: pointer;
+`;
+
 const BGNAV = styled.div`
   position: fixed;
   top: 0;
@@ -109,4 +126,12 @@ const BGNAV = styled.div`
   width: 225px;
   list-style: none;
   padding: 20px;
+  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    a {
+      font-weight: 900;
+    }
+  }
 `;
