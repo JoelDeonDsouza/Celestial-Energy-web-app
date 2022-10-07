@@ -18,6 +18,7 @@ To run this project
 
 ```bash
   npm start
+  yarn start
 ```
 
 ## Features
